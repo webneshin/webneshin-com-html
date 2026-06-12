@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>وب‌نشین | Webneshin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      <span class="logo-fa">وب‌نشین</span>
+      <span class="logo-en">Webneshin</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services"   data-fa="خدمات"        data-en="Services">خدمات</a></li>
+      <li><a href="#wordpress"  data-fa="وردپرس"      data-en="WordPress">وردپرس</a></li>
+      <li><a href="#seo"        data-fa="سئو"         data-en="SEO">سئو</a></li>
+      <li><a href="#idea"       data-fa="ایده شما"   data-en="Your Idea">ایده شما</a></li>
+      <li><a href="#why"        data-fa="چرا ما"     data-en="Why Us">چرا ما</a></li>
+      <li><a href="#contact"    data-fa="تماس"       data-en="Contact">تماس</a></li>
+    </ul>
+    <button class="lang-btn" id="langBtn">EN</button>
+    <button class="burger" id="burger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services"  data-fa="خدمات"      data-en="Services">خدمات</a>
+    <a href="#wordpress" data-fa="وردپرس"    data-en="WordPress">وردپرس</a>
+    <a href="#seo"       data-fa="سئو"       data-en="SEO">سئو</a>
+    <a href="#idea"      data-fa="ایده شما" data-en="Your Idea">ایده شما</a>
+    <a href="#why"       data-fa="چرا ما"   data-en="Why Us">چرا ما</a>
+    <a href="#contact"   data-fa="تماس"     data-en="Contact">تماس</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span data-fa="آماده همکاری" data-en="Open for Collaboration">آماده همکاری</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line" data-fa="ایده‌ات را به ما بده" data-en="Share Your Idea With Us">ایده‌ات را به ما بده</span>
+      <span class="line accent" data-fa="ما اپ می‌سازیم" data-en="We Build the App">ما اپ می‌سازیم</span>
+    </h1>
+    <p class="hero-sub" data-fa="وب‌نشین تیمی از توسعه‌دهندگان حرفه‌ای است که ایده‌های شما را به نرم‌افزارهای واقعی تبدیل می‌کند." data-en="Webneshin is a team of professional developers turning your ideas into real software products.">
+      وب‌نشین تیمی از توسعه‌دهندگان حرفه‌ای است که ایده‌های شما را به نرم‌افزارهای واقعی تبدیل می‌کند.
+    </p>
+    <div class="hero-cta">
+      <a href="#idea" class="btn btn-primary" data-fa="ایده‌ات را بفرست" data-en="Submit Your Idea">ایده‌ات را بفرست</a>
+      <a href="#services" class="btn btn-ghost" data-fa="خدمات ما" data-en="Our Services">خدمات ما</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span data-fa="اسکرول کن" data-en="Scroll">اسکرول کن</span>
+  </div>
+</section>
+
+<!-- ─── MARQUEE ─── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Web App</span><span>·</span>
+    <span>WordPress</span><span>·</span>
+    <span>SEO</span><span>·</span>
+    <span>Mobile App</span><span>·</span>
+    <span>UI / UX</span><span>·</span>
+    <span>API Development</span><span>·</span>
+    <span>Backend</span><span>·</span>
+    <span>Frontend</span><span>·</span>
+    <span>Web App</span><span>·</span>
+    <span>WordPress</span><span>·</span>
+    <span>SEO</span><span>·</span>
+    <span>Mobile App</span><span>·</span>
+    <span>UI / UX</span><span>·</span>
+    <span>API Development</span><span>·</span>
+    <span>Backend</span><span>·</span>
+    <span>Frontend</span><span>·</span>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─── -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-fa="خدمات ما" data-en="What We Do">خدمات ما</span>
+      <h2 data-fa="هر چیزی که نیاز داری" data-en="Everything You Need">هر چیزی که نیاز داری</h2>
+      <p data-fa="از طراحی تا توسعه، از ایده تا محصول نهایی" data-en="From design to development, from idea to final product">از طراحی تا توسعه، از ایده تا محصول نهایی</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card reveal" style="--d:0s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 data-fa="توسعه وب" data-en="Web Development">توسعه وب</h3>
+        <p data-fa="ساخت وب‌سایت‌ها و اپلیکیشن‌های وب مدرن، سریع و ریسپانسیو با آخرین تکنولوژی‌ها" data-en="Building modern, fast and responsive websites and web applications with the latest technologies">ساخت وب‌سایت‌ها و اپلیکیشن‌های وب مدرن، سریع و ریسپانسیو با آخرین تکنولوژی‌ها</p>
+        <div class="card-tags"><span>React</span><span>Next.js</span><span>Vue</span></div>
+      </div>
+      <div class="card reveal" style="--d:.1s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg>
+        </div>
+        <h3 data-fa="اپ موبایل" data-en="Mobile App">اپ موبایل</h3>
+        <p data-fa="توسعه اپلیکیشن‌های iOS و Android با رابط کاربری شیک و عملکرد عالی" data-en="iOS and Android app development with sleek UI and excellent performance">توسعه اپلیکیشن‌های iOS و Android با رابط کاربری شیک و عملکرد عالی</p>
+        <div class="card-tags"><span>Flutter</span><span>React Native</span></div>
+      </div>
+      <div class="card reveal" style="--d:.2s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 data-fa="طراحی UI/UX" data-en="UI / UX Design">طراحی UI/UX</h3>
+        <p data-fa="طراحی رابط کاربری زیبا و تجربه کاربری روان که کاربران عاشقش می‌شوند" data-en="Beautiful UI design and smooth UX that users will love">طراحی رابط کاربری زیبا و تجربه کاربری روان که کاربران عاشقش می‌شوند</p>
+        <div class="card-tags"><span>Figma</span><span>Prototyping</span></div>
+      </div>
+      <div class="card reveal" style="--d:.3s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <h3 data-fa="بک‌اند و API" data-en="Backend & API">بک‌اند و API</h3>
+        <p data-fa="طراحی و پیاده‌سازی سرویس‌های قوی، مقیاس‌پذیر و امن برای هر پروژه‌ای" data-en="Designing and implementing powerful, scalable and secure services for any project">طراحی و پیاده‌سازی سرویس‌های قوی، مقیاس‌پذیر و امن برای هر پروژه‌ای</p>
+        <div class="card-tags"><span>Node.js</span><span>Python</span><span>Go</span></div>
+      </div>
+      <div class="card reveal" style="--d:.4s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3 data-fa="نگهداری و پشتیبانی" data-en="Maintenance & Support">نگهداری و پشتیبانی</h3>
+        <p data-fa="پشتیبانی مستمر، آپدیت‌های دوره‌ای و بهینه‌سازی مداوم محصول شما" data-en="Continuous support, regular updates and ongoing optimization of your product">پشتیبانی مستمر، آپدیت‌های دوره‌ای و بهینه‌سازی مداوم محصول شما</p>
+        <div class="card-tags"><span>24/7 Support</span><span>Updates</span></div>
+      </div>
+      <div class="card reveal" style="--d:.5s">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 data-fa="مشاوره فنی" data-en="Tech Consulting">مشاوره فنی</h3>
+        <p data-fa="راهنمایی در انتخاب تکنولوژی، معماری سیستم و برنامه‌ریزی پروژه" data-en="Guidance on technology selection, system architecture and project planning">راهنمایی در انتخاب تکنولوژی، معماری سیستم و برنامه‌ریزی پروژه</p>
+        <div class="card-tags"><span>Architecture</span><span>Strategy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PARALLAX BANNER ─── -->
+<div class="parallax-banner" id="parallaxBanner">
+  <div class="parallax-inner" id="parallaxInner">
+    <div class="pb-content reveal">
+      <h2 data-fa="از ایده تا محصول در کمترین زمان" data-en="From Idea to Product in Record Time">از ایده تا محصول در کمترین زمان</h2>
+      <p data-fa="ما فرایند توسعه رو ساده می‌کنیم تا شما روی کسب‌وکارتون تمرکز کنید" data-en="We simplify the development process so you can focus on your business">ما فرایند توسعه رو ساده می‌کنیم تا شما روی کسب‌وکارتون تمرکز کنید</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── WORDPRESS ─── -->
+<section id="wordpress" class="section section-dark">
+  <div class="container">
+    <div class="wp-grid">
+      <div class="wp-text reveal-left">
+        <span class="section-tag" data-fa="سایت وردپرسی" data-en="WordPress Website">سایت وردپرسی</span>
+        <h2 data-fa="سایت وردپرسی حرفه‌ای برای کسب‌وکار شما" data-en="Professional WordPress Site for Your Business">سایت وردپرسی حرفه‌ای برای کسب‌وکار شما</h2>
+        <p data-fa="وردپرس قدرتمندترین CMS دنیاست. ما سایت‌هایی می‌سازیم که هم زیباست، هم سریع، هم قابل مدیریت توسط خودت." data-en="WordPress is the world's most powerful CMS. We build sites that are beautiful, fast, and manageable by you.">وردپرس قدرتمندترین CMS دنیاست. ما سایت‌هایی می‌سازیم که هم زیباست، هم سریع، هم قابل مدیریت توسط خودت.</p>
+        <ul class="wp-features">
+          <li class="reveal-left" style="--d:.1s">
+            <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><strong data-fa="قالب اختصاصی" data-en="Custom Theme">قالب اختصاصی</strong><span data-fa="طراحی منحصربه‌فرد متناسب با برند شما" data-en="Unique design tailored to your brand">طراحی منحصربه‌فرد متناسب با برند شما</span></div>
+          </li>
+          <li class="reveal-left" style="--d:.2s">
+            <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+            <div><strong data-fa="فروشگاه WooCommerce" data-en="WooCommerce Shop">فروشگاه WooCommerce</strong><span data-fa="فروشگاه آنلاین کامل با درگاه پرداخت" data-en="Full online store with payment gateway">فروشگاه آنلاین کامل با درگاه پرداخت</span></div>
+          </li>
+          <li class="reveal-left" style="--d:.3s">
+            <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div><strong data-fa="سئو آماده" data-en="SEO Ready">سئو آماده</strong><span data-fa="بهینه‌سازی شده برای گوگل از روز اول" data-en="Optimized for Google from day one">بهینه‌سازی شده برای گوگل از روز اول</span></div>
+          </li>
+          <li class="reveal-left" style="--d:.4s">
+            <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg></div>
+            <div><strong data-fa="کاملاً ریسپانسیو" data-en="Fully Responsive">کاملاً ریسپانسیو</strong><span data-fa="سازگار با موبایل، تبلت و دسکتاپ" data-en="Compatible with mobile, tablet and desktop">سازگار با موبایل، تبلت و دسکتاپ</span></div>
+          </li>
+          <li class="reveal-left" style="--d:.5s">
+            <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><strong data-fa="امنیت و بک‌آپ" data-en="Security & Backup">امنیت و بک‌آپ</strong><span data-fa="محافظت کامل و بک‌آپ خودکار" data-en="Full protection and automatic backup">محافظت کامل و بک‌آپ خودکار</span></div>
+          </li>
+        </ul>
+        <a href="#idea" class="btn btn-primary reveal-left" style="--d:.6s" data-fa="سایت وردپرسی می‌خوام" data-en="I Want a WordPress Site">سایت وردپرسی می‌خوام</a>
+      </div>
+      <div class="wp-visual reveal-right">
+        <div class="wp-browser">
+          <div class="browser-bar">
+            <span class="b-dot" style="background:#ff5f57"></span>
+            <span class="b-dot" style="background:#febc2e"></span>
+            <span class="b-dot" style="background:#28c840"></span>
+            <span class="b-url">webneshin.ir</span>
+          </div>
+          <div class="browser-body">
+            <div class="mock-nav"></div>
+            <div class="mock-hero-img"></div>
+            <div class="mock-content">
+              <div class="mock-line w80"></div>
+              <div class="mock-line w60"></div>
+              <div class="mock-line w90"></div>
+            </div>
+            <div class="mock-cards-row">
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wp-float-badge wp-badge-1 reveal-scale" style="--d:.4s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span data-fa="سرعت بالا" data-en="Fast Speed">سرعت بالا</span>
+        </div>
+        <div class="wp-float-badge wp-badge-2 reveal-scale" style="--d:.5s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-fa="امن" data-en="Secure">امن</span>
+        </div>
+        <div class="wp-float-badge wp-badge-3 reveal-scale" style="--d:.6s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>SEO Ready</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SEO ─── -->
+<section id="seo" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-fa="بهینه‌سازی موتور جستجو" data-en="Search Engine Optimization">بهینه‌سازی موتور جستجو</span>
+      <h2 data-fa="سایتت رو در گوگل بالا بیار" data-en="Rank Higher on Google">سایتت رو در گوگل بالا بیار</h2>
+      <p data-fa="با سئو حرفه‌ای، مشتریان خودشون پیدات می‌کنن" data-en="With professional SEO, customers find you on their own">با سئو حرفه‌ای، مشتریان خودشون پیدات می‌کنن</p>
+    </div>
+
+    <div class="seo-layout">
+      <div class="seo-metrics reveal-left">
+        <div class="seo-score-card">
+          <div class="seo-ring-wrap">
+            <svg class="seo-ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="10"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="url(#seoGrad)" stroke-width="10"
+                stroke-dasharray="327" stroke-dashoffset="327"
+                stroke-linecap="round" class="seo-ring-fill"
+                transform="rotate(-90 60 60)"/>
+              <defs>
+                <linearGradient id="seoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#7c3aed"/>
+                  <stop offset="100%" stop-color="#06b6d4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="seo-ring-label">
+              <span class="seo-score-num" data-target="94">0</span>
+              <small>/ 100</small>
+            </div>
+          </div>
+          <p data-fa="امتیاز SEO میانگین سایت‌های ما" data-en="Average SEO score of our sites">امتیاز SEO میانگین سایت‌های ما</p>
+        </div>
+
+        <div class="seo-bars">
+          <div class="seo-bar-item reveal-left" style="--d:.1s">
+            <div class="seo-bar-header">
+              <span data-fa="سئوی داخلی (On-Page)" data-en="On-Page SEO">سئوی داخلی (On-Page)</span>
+              <span class="seo-bar-pct">96%</span>
+            </div>
+            <div class="seo-bar-track"><div class="seo-bar-fill" data-width="96" style="--c:#7c3aed"></div></div>
+          </div>
+          <div class="seo-bar-item reveal-left" style="--d:.2s">
+            <div class="seo-bar-header">
+              <span data-fa="سرعت سایت" data-en="Site Speed">سرعت سایت</span>
+              <span class="seo-bar-pct">92%</span>
+            </div>
+            <div class="seo-bar-track"><div class="seo-bar-fill" data-width="92" style="--c:#a855f7"></div></div>
+          </div>
+          <div class="seo-bar-item reveal-left" style="--d:.3s">
+            <div class="seo-bar-header">
+              <span data-fa="سئوی فنی (Technical)" data-en="Technical SEO">سئوی فنی (Technical)</span>
+              <span class="seo-bar-pct">89%</span>
+            </div>
+            <div class="seo-bar-track"><div class="seo-bar-fill" data-width="89" style="--c:#06b6d4"></div></div>
+          </div>
+          <div class="seo-bar-item reveal-left" style="--d:.4s">
+            <div class="seo-bar-header">
+              <span data-fa="موبایل‌فرندلی" data-en="Mobile Friendly">موبایل‌فرندلی</span>
+              <span class="seo-bar-pct">98%</span>
+            </div>
+            <div class="seo-bar-track"><div class="seo-bar-fill" data-width="98" style="--c:#10b981"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seo-services-list">
+        <div class="seo-service reveal-right" style="--d:0s">
+          <div class="seo-s-num">01</div>
+          <div class="seo-s-body">
+            <h3 data-fa="سئوی داخلی" data-en="On-Page SEO">سئوی داخلی</h3>
+            <p data-fa="بهینه‌سازی عنوان‌ها، توضیحات متا، ساختار URL، لینک‌سازی داخلی و محتوای کلیدی" data-en="Optimizing titles, meta descriptions, URL structure, internal linking and key content">بهینه‌سازی عنوان‌ها، توضیحات متا، ساختار URL، لینک‌سازی داخلی و محتوای کلیدی</p>
+          </div>
+        </div>
+        <div class="seo-service reveal-right" style="--d:.1s">
+          <div class="seo-s-num">02</div>
+          <div class="seo-s-body">
+            <h3 data-fa="سئوی فنی" data-en="Technical SEO">سئوی فنی</h3>
+            <p data-fa="بهینه‌سازی Core Web Vitals، schema markup، sitemap، robots.txt و ساختار کرال" data-en="Optimizing Core Web Vitals, schema markup, sitemap, robots.txt and crawl structure">بهینه‌سازی Core Web Vitals، schema markup، sitemap، robots.txt و ساختار کرال</p>
+          </div>
+        </div>
+        <div class="seo-service reveal-right" style="--d:.2s">
+          <div class="seo-s-num">03</div>
+          <div class="seo-s-body">
+            <h3 data-fa="سئوی محلی" data-en="Local SEO">سئوی محلی</h3>
+            <p data-fa="بهینه‌سازی Google My Business، نقشه‌ها و جستجوهای محلی برای کسب‌وکار شما" data-en="Optimizing Google My Business, maps and local searches for your business">بهینه‌سازی Google My Business، نقشه‌ها و جستجوهای محلی برای کسب‌وکار شما</p>
+          </div>
+        </div>
+        <div class="seo-service reveal-right" style="--d:.3s">
+          <div class="seo-s-num">04</div>
+          <div class="seo-s-body">
+            <h3 data-fa="گزارش و آنالیز" data-en="Reporting & Analytics">گزارش و آنالیز</h3>
+            <p data-fa="گزارش ماهانه رنکینگ کلمات کلیدی، ترافیک، و پیشنهاد بهبود مستمر" data-en="Monthly keyword ranking reports, traffic insights and continuous improvement suggestions">گزارش ماهانه رنکینگ کلمات کلیدی، ترافیک، و پیشنهاد بهبود مستمر</p>
+          </div>
+        </div>
+        <div class="seo-service reveal-right" style="--d:.4s">
+          <div class="seo-s-num">05</div>
+          <div class="seo-s-body">
+            <h3 data-fa="تولید محتوا" data-en="Content Creation">تولید محتوا</h3>
+            <p data-fa="تولید محتوای بهینه‌شده برای کلمات کلیدی هدف که هم گوگل عاشقشه هم کاربر" data-en="Creating keyword-optimized content that both Google and users love">تولید محتوای بهینه‌شده برای کلمات کلیدی هدف که هم گوگل عاشقشه هم کاربر</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-fa="فرآیند کار" data-en="How It Works">فرآیند کار</span>
+      <h2 data-fa="چطور کار می‌کنیم" data-en="How We Work">چطور کار می‌کنیم</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" style="--d:0s">
+        <div class="step-num">۱</div>
+        <div class="step-body">
+          <h3 data-fa="ایده‌ات رو بفرست" data-en="Submit Your Idea">ایده‌ات رو بفرست</h3>
+          <p data-fa="فرم ایده را پر کن، توضیح بده چی می‌خوای. هیچ دانش فنی لازم نیست." data-en="Fill the idea form, describe what you want. No technical knowledge needed.">فرم ایده را پر کن، توضیح بده چی می‌خوای. هیچ دانش فنی لازم نیست.</p>
+        </div>
+      </div>
+      <div class="step-connector reveal" style="--d:.1s"></div>
+      <div class="step reveal" style="--d:.2s">
+        <div class="step-num">۲</div>
+        <div class="step-body">
+          <h3 data-fa="بررسی و پیشنهاد" data-en="Review & Proposal">بررسی و پیشنهاد</h3>
+          <p data-fa="تیم ما ایده‌ات رو بررسی می‌کنه و یه پیشنهاد فنی و مالی برات می‌فرسته." data-en="Our team reviews your idea and sends you a technical and financial proposal.">تیم ما ایده‌ات رو بررسی می‌کنه و یه پیشنهاد فنی و مالی برات می‌فرسته.</p>
+        </div>
+      </div>
+      <div class="step-connector reveal" style="--d:.3s"></div>
+      <div class="step reveal" style="--d:.4s">
+        <div class="step-num">۳</div>
+        <div class="step-body">
+          <h3 data-fa="توسعه و تحویل" data-en="Build & Deliver">توسعه و تحویل</h3>
+          <p data-fa="شروع می‌کنیم، در مراحل مختلف بهت گزارش می‌دیم و نهایتاً محصول رو تحویل می‌گیری." data-en="We start building, report progress at each stage, and deliver the final product.">شروع می‌کنیم، در مراحل مختلف بهت گزارش می‌دیم و نهایتاً محصول رو تحویل می‌گیری.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── IDEA FORM ─── -->
+<section id="idea" class="section section-dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-fa="ایده شما" data-en="Your Idea">ایده شما</span>
+      <h2 data-fa="ایده‌ات رو با ما در میان بذار" data-en="Share Your Idea With Us">ایده‌ات رو با ما در میان بذار</h2>
+      <p data-fa="چند خط بنویس، بقیه‌اش با ماست" data-en="Write a few lines, we'll handle the rest">چند خط بنویس، بقیه‌اش با ماست</p>
+    </div>
+    <form class="idea-form reveal" id="ideaForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label data-fa="اسمت" data-en="Your Name">اسمت</label>
+          <input type="text" id="fName" placeholder="" data-fa-placeholder="مثلاً: علی رضایی" data-en-placeholder="e.g. John Doe" />
+        </div>
+        <div class="form-group">
+          <label data-fa="ایمیل یا شماره" data-en="Email or Phone">ایمیل یا شماره</label>
+          <input type="text" id="fContact" placeholder="" data-fa-placeholder="برای پیگیری" data-en-placeholder="For follow-up" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-fa="نوع پروژه" data-en="Project Type">نوع پروژه</label>
+        <div class="select-wrap">
+          <select id="fType">
+            <option value="" data-fa="انتخاب کن..." data-en="Select...">انتخاب کن...</option>
+            <option value="web" data-fa="وب‌سایت / وب‌اپ" data-en="Website / Web App">وب‌سایت / وب‌اپ</option>
+            <option value="mobile" data-fa="اپ موبایل" data-en="Mobile App">اپ موبایل</option>
+            <option value="both" data-fa="هر دو" data-en="Both">هر دو</option>
+            <option value="other" data-fa="سایر" data-en="Other">سایر</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-fa="ایده‌ات رو توضیح بده" data-en="Describe Your Idea">ایده‌ات رو توضیح بده</label>
+        <textarea id="fIdea" rows="5" placeholder="" data-fa-placeholder="مثلاً: می‌خوام یه اپ بسازم که کاربرا بتونن..." data-en-placeholder="e.g. I want to build an app where users can..."></textarea>
+      </div>
+      <div class="form-group">
+        <label data-fa="بودجه تقریبی (اختیاری)" data-en="Approximate Budget (Optional)">بودجه تقریبی (اختیاری)</label>
+        <div class="budget-options">
+          <label class="budget-opt"><input type="radio" name="budget" value="small" /><span data-fa="زیر ۵۰ میلیون" data-en="Under $500">زیر ۵۰ میلیون</span></label>
+          <label class="budget-opt"><input type="radio" name="budget" value="mid" /><span data-fa="۵۰ تا ۲۰۰ میلیون" data-en="$500–$2000">۵۰ تا ۲۰۰ میلیون</span></label>
+          <label class="budget-opt"><input type="radio" name="budget" value="large" /><span data-fa="بالای ۲۰۰ میلیون" data-en="$2000+">بالای ۲۰۰ میلیون</span></label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">
+        <span data-fa="ارسال ایده" data-en="Submit Idea">ارسال ایده</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-success" id="formSuccess">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+        <span data-fa="ایده‌ات دریافت شد! به زودی باهات تماس می‌گیریم." data-en="Your idea received! We'll contact you soon.">ایده‌ات دریافت شد! به زودی باهات تماس می‌گیریم.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ─── WHY US ─── -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-fa="چرا وب‌نشین" data-en="Why Webneshin">چرا وب‌نشین</span>
+      <h2 data-fa="چرا ما رو انتخاب کنی" data-en="Why Choose Us">چرا ما رو انتخاب کنی</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal" style="--d:0s">
+        <div class="why-icon">🎯</div>
+        <h3 data-fa="تمرکز روی نتیجه" data-en="Result Focused">تمرکز روی نتیجه</h3>
+        <p data-fa="برامون مهمه محصول کار کنه، نه فقط تحویل داده بشه." data-en="We care that the product works, not just that it's delivered.">برامون مهمه محصول کار کنه، نه فقط تحویل داده بشه.</p>
+      </div>
+      <div class="why-item reveal" style="--d:.1s">
+        <div class="why-icon">⚡</div>
+        <h3 data-fa="سرعت بالا" data-en="Fast Delivery">سرعت بالا</h3>
+        <p data-fa="با متدولوژی Agile، سریع تحویل می‌دیم و سریع بهبود می‌دیم." data-en="With Agile methodology, we deliver fast and improve fast.">با متدولوژی Agile، سریع تحویل می‌دیم و سریع بهبود می‌دیم.</p>
+      </div>
+      <div class="why-item reveal" style="--d:.2s">
+        <div class="why-icon">💬</div>
+        <h3 data-fa="ارتباط شفاف" data-en="Clear Communication">ارتباط شفاف</h3>
+        <p data-fa="همیشه در دسترسیم. هر مرحله رو باهات در میان می‌ذاریم." data-en="Always available. We keep you updated at every stage.">همیشه در دسترسیم. هر مرحله رو باهات در میان می‌ذاریم.</p>
+      </div>
+      <div class="why-item reveal" style="--d:.3s">
+        <div class="why-icon">🔐</div>
+        <h3 data-fa="کد تمیز و امن" data-en="Clean & Secure Code">کد تمیز و امن</h3>
+        <p data-fa="کد قابل نگهداری، تست‌شده و امن می‌نویسیم." data-en="We write maintainable, tested and secure code.">کد قابل نگهداری، تست‌شده و امن می‌نویسیم.</p>
+      </div>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><span class="stat-num" data-target="50">0</span><span>+</span><p data-fa="پروژه تحویل‌شده" data-en="Projects Delivered">پروژه تحویل‌شده</p></div>
+      <div class="stat"><span class="stat-num" data-target="30">0</span><span>+</span><p data-fa="مشتری راضی" data-en="Happy Clients">مشتری راضی</p></div>
+      <div class="stat"><span class="stat-num" data-target="5">0</span><span>+</span><p data-fa="سال تجربه" data-en="Years Experience">سال تجربه</p></div>
+      <div class="stat"><span class="stat-num" data-target="98">0</span><span>%</span><p data-fa="رضایت مشتری" data-en="Client Satisfaction">رضایت مشتری</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact" class="section section-dark">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-fa="تماس با ما" data-en="Get in Touch">تماس با ما</span>
+      <h2 data-fa="بیا صحبت کنیم" data-en="Let's Talk">بیا صحبت کنیم</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div><p data-fa="ایمیل" data-en="Email">ایمیل</p><a href="mailto:webneshin.office@gmail.com">webneshin.office@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+          </div>
+          <div><p data-fa="تلگرام" data-en="Telegram">تلگرام</p><a href="https://t.me/webneshin" target="_blank">@webneshin</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div><p data-fa="ساعت پاسخگویی" data-en="Working Hours">ساعت پاسخگویی</p><span data-fa="شنبه تا چهارشنبه ۹ تا ۱۸" data-en="Sat–Wed 9am–6pm">شنبه تا چهارشنبه ۹ تا ۱۸</span></div>
+        </div>
+      </div>
+      <div class="contact-cta reveal">
+        <div class="cta-card">
+          <h3 data-fa="آماده شروع هستی؟" data-en="Ready to Start?">آماده شروع هستی؟</h3>
+          <p data-fa="ایده‌ات رو برام بفرست، در کمتر از ۲۴ ساعت جواب می‌گیری." data-en="Send your idea, get a reply within 24 hours.">ایده‌ات رو برام بفرست، در کمتر از ۲۴ ساعت جواب می‌گیری.</p>
+          <a href="#idea" class="btn btn-primary" data-fa="همین الان شروع کن" data-en="Start Now">همین الان شروع کن</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-dot"></span>
+        <span data-fa="وب‌نشین" data-en="Webneshin">وب‌نشین</span>
+      </div>
+      <p class="footer-copy" data-fa="© ۱۴۰۴ وب‌نشین — همه حقوق محفوظ است" data-en="© 2025 Webneshin — All rights reserved">© ۱۴۰۴ وب‌نشین — همه حقوق محفوظ است</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
