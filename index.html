@@ -11,6 +11,9 @@
 </head>
 <body>
 
+<!-- ─── SCROLL PROGRESS ─── -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- ─── NAV ─── -->
 <nav id="navbar">
   <div class="nav-inner">
@@ -25,6 +28,7 @@
       <li><a href="#seo"        data-fa="سئو"         data-en="SEO">سئو</a></li>
       <li><a href="#idea"       data-fa="ایده شما"   data-en="Your Idea">ایده شما</a></li>
       <li><a href="#why"        data-fa="چرا ما"     data-en="Why Us">چرا ما</a></li>
+      <li><a href="#testimonials" data-fa="نظرات"    data-en="Reviews">نظرات</a></li>
       <li><a href="#contact"    data-fa="تماس"       data-en="Contact">تماس</a></li>
     </ul>
     <button class="lang-btn" id="langBtn">EN</button>
@@ -38,6 +42,7 @@
     <a href="#seo"       data-fa="سئو"       data-en="SEO">سئو</a>
     <a href="#idea"      data-fa="ایده شما" data-en="Your Idea">ایده شما</a>
     <a href="#why"       data-fa="چرا ما"   data-en="Why Us">چرا ما</a>
+    <a href="#testimonials" data-fa="نظرات" data-en="Reviews">نظرات</a>
     <a href="#contact"   data-fa="تماس"     data-en="Contact">تماس</a>
   </div>
 </nav>
@@ -91,62 +96,124 @@
   </div>
 </div>
 
-<!-- ─── SERVICES ─── -->
-<section id="services" class="section">
-  <div class="container">
-    <div class="section-header reveal">
+<!-- ─── SERVICES (PINNED) ─── -->
+<section id="services" class="pin-section" data-pin style="--stages:6">
+  <div class="pin-sticky">
+    <div class="pin-head">
       <span class="section-tag" data-fa="خدمات ما" data-en="What We Do">خدمات ما</span>
       <h2 data-fa="هر چیزی که نیاز داری" data-en="Everything You Need">هر چیزی که نیاز داری</h2>
-      <p data-fa="از طراحی تا توسعه، از ایده تا محصول نهایی" data-en="From design to development, from idea to final product">از طراحی تا توسعه، از ایده تا محصول نهایی</p>
     </div>
-    <div class="cards-grid">
-      <div class="card reveal" style="--d:0s">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+
+    <div class="pin-stages">
+      <article class="pin-stage" data-stage="0">
+        <span class="pin-ghost-num">۰۱</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 data-fa="توسعه وب" data-en="Web Development">توسعه وب</h3>
+          <p data-fa="وب‌سایت‌ها و وب‌اپلیکیشن‌های مدرن، سریع و کاملاً ریسپانسیو با جدیدترین تکنولوژی‌ها می‌سازیم؛ از یک لندینگ ساده تا داشبوردهای پیچیده‌ی سازمانی." data-en="We build modern, fast and fully responsive websites and web apps with the latest technologies — from a simple landing page to complex enterprise dashboards.">وب‌سایت‌ها و وب‌اپلیکیشن‌های مدرن، سریع و کاملاً ریسپانسیو با جدیدترین تکنولوژی‌ها می‌سازیم؛ از یک لندینگ ساده تا داشبوردهای پیچیده‌ی سازمانی.</p>
+          <ul class="pin-stage-points">
+            <li data-fa="معماری کامپوننت‌محور و قابل توسعه" data-en="Scalable component-based architecture">معماری کامپوننت‌محور و قابل توسعه</li>
+            <li data-fa="بهینه برای سرعت و Core Web Vitals" data-en="Optimized for speed and Core Web Vitals">بهینه برای سرعت و Core Web Vitals</li>
+            <li data-fa="یکپارچه با هر API و سرویس ابری" data-en="Integrates with any API and cloud service">یکپارچه با هر API و سرویس ابری</li>
+          </ul>
+          <div class="card-tags"><span>React</span><span>Next.js</span><span>Vue</span></div>
         </div>
-        <h3 data-fa="توسعه وب" data-en="Web Development">توسعه وب</h3>
-        <p data-fa="ساخت وب‌سایت‌ها و اپلیکیشن‌های وب مدرن، سریع و ریسپانسیو با آخرین تکنولوژی‌ها" data-en="Building modern, fast and responsive websites and web applications with the latest technologies">ساخت وب‌سایت‌ها و اپلیکیشن‌های وب مدرن، سریع و ریسپانسیو با آخرین تکنولوژی‌ها</p>
-        <div class="card-tags"><span>React</span><span>Next.js</span><span>Vue</span></div>
-      </div>
-      <div class="card reveal" style="--d:.1s">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg>
+      </article>
+
+      <article class="pin-stage" data-stage="1">
+        <span class="pin-ghost-num">۰۲</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg>
+          </div>
+          <h3 data-fa="اپ موبایل" data-en="Mobile App">اپ موبایل</h3>
+          <p data-fa="اپلیکیشن‌های iOS و Android با رابط کاربری شیک، عملکرد روان و یک کدبیس مشترک توسعه می‌دیم تا سریع‌تر و کم‌هزینه‌تر به هر دو پلتفرم برسی." data-en="We develop iOS and Android apps with sleek UI, smooth performance and a shared codebase so you reach both platforms faster and cheaper.">اپلیکیشن‌های iOS و Android با رابط کاربری شیک، عملکرد روان و یک کدبیس مشترک توسعه می‌دیم تا سریع‌تر و کم‌هزینه‌تر به هر دو پلتفرم برسی.</p>
+          <ul class="pin-stage-points">
+            <li data-fa="انتشار در App Store و Google Play" data-en="Publishing on App Store and Google Play">انتشار در App Store و Google Play</li>
+            <li data-fa="نوتیفیکیشن، پرداخت و آفلاین‌مود" data-en="Push notifications, payments and offline mode">نوتیفیکیشن، پرداخت و آفلاین‌مود</li>
+            <li data-fa="انیمیشن و تجربه‌ی نیتیو" data-en="Native-feeling animations and experience">انیمیشن و تجربه‌ی نیتیو</li>
+          </ul>
+          <div class="card-tags"><span>Flutter</span><span>React Native</span></div>
         </div>
-        <h3 data-fa="اپ موبایل" data-en="Mobile App">اپ موبایل</h3>
-        <p data-fa="توسعه اپلیکیشن‌های iOS و Android با رابط کاربری شیک و عملکرد عالی" data-en="iOS and Android app development with sleek UI and excellent performance">توسعه اپلیکیشن‌های iOS و Android با رابط کاربری شیک و عملکرد عالی</p>
-        <div class="card-tags"><span>Flutter</span><span>React Native</span></div>
-      </div>
-      <div class="card reveal" style="--d:.2s">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </article>
+
+      <article class="pin-stage" data-stage="2">
+        <span class="pin-ghost-num">۰۳</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 data-fa="طراحی UI/UX" data-en="UI / UX Design">طراحی UI/UX</h3>
+          <p data-fa="از پژوهش کاربر و وایرفریم تا پروتوتایپ تعاملی و دیزاین‌سیستم کامل؛ رابط‌هایی می‌سازیم که هم زیباست هم کاربر بدون فکر کردن باهاش کار می‌کنه." data-en="From user research and wireframes to interactive prototypes and a full design system — we craft interfaces that are beautiful and effortless to use.">از پژوهش کاربر و وایرفریم تا پروتوتایپ تعاملی و دیزاین‌سیستم کامل؛ رابط‌هایی می‌سازیم که هم زیباست هم کاربر بدون فکر کردن باهاش کار می‌کنه.</p>
+          <ul class="pin-stage-points">
+            <li data-fa="پژوهش کاربر و معماری اطلاعات" data-en="User research and information architecture">پژوهش کاربر و معماری اطلاعات</li>
+            <li data-fa="دیزاین‌سیستم و کامپوننت‌لایبرری" data-en="Design system and component library">دیزاین‌سیستم و کامپوننت‌لایبرری</li>
+            <li data-fa="پروتوتایپ تعاملی و تست کاربری" data-en="Interactive prototypes and usability testing">پروتوتایپ تعاملی و تست کاربری</li>
+          </ul>
+          <div class="card-tags"><span>Figma</span><span>Prototyping</span></div>
         </div>
-        <h3 data-fa="طراحی UI/UX" data-en="UI / UX Design">طراحی UI/UX</h3>
-        <p data-fa="طراحی رابط کاربری زیبا و تجربه کاربری روان که کاربران عاشقش می‌شوند" data-en="Beautiful UI design and smooth UX that users will love">طراحی رابط کاربری زیبا و تجربه کاربری روان که کاربران عاشقش می‌شوند</p>
-        <div class="card-tags"><span>Figma</span><span>Prototyping</span></div>
-      </div>
-      <div class="card reveal" style="--d:.3s">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </article>
+
+      <article class="pin-stage" data-stage="3">
+        <span class="pin-ghost-num">۰۴</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 data-fa="بک‌اند و API" data-en="Backend & API">بک‌اند و API</h3>
+          <p data-fa="سرویس‌های قوی، مقیاس‌پذیر و امن طراحی و پیاده‌سازی می‌کنیم؛ از دیتابیس و احراز هویت تا API و زیرساخت ابری که زیر بار سنگین هم نمی‌لرزه." data-en="We design and implement powerful, scalable and secure services — from database and auth to APIs and cloud infrastructure that holds up under heavy load.">سرویس‌های قوی، مقیاس‌پذیر و امن طراحی و پیاده‌سازی می‌کنیم؛ از دیتابیس و احراز هویت تا API و زیرساخت ابری که زیر بار سنگین هم نمی‌لرزه.</p>
+          <ul class="pin-stage-points">
+            <li data-fa="REST و GraphQL با مستندات کامل" data-en="REST and GraphQL with full docs">REST و GraphQL با مستندات کامل</li>
+            <li data-fa="معماری مقیاس‌پذیر و میکروسرویس" data-en="Scalable and microservice architecture">معماری مقیاس‌پذیر و میکروسرویس</li>
+            <li data-fa="امنیت، کشینگ و مانیتورینگ" data-en="Security, caching and monitoring">امنیت، کشینگ و مانیتورینگ</li>
+          </ul>
+          <div class="card-tags"><span>Node.js</span><span>Python</span><span>Go</span></div>
         </div>
-        <h3 data-fa="بک‌اند و API" data-en="Backend & API">بک‌اند و API</h3>
-        <p data-fa="طراحی و پیاده‌سازی سرویس‌های قوی، مقیاس‌پذیر و امن برای هر پروژه‌ای" data-en="Designing and implementing powerful, scalable and secure services for any project">طراحی و پیاده‌سازی سرویس‌های قوی، مقیاس‌پذیر و امن برای هر پروژه‌ای</p>
-        <div class="card-tags"><span>Node.js</span><span>Python</span><span>Go</span></div>
-      </div>
-      <div class="card reveal" style="--d:.4s">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </article>
+
+      <article class="pin-stage" data-stage="4">
+        <span class="pin-ghost-num">۰۵</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3 data-fa="نگهداری و پشتیبانی" data-en="Maintenance & Support">نگهداری و پشتیبانی</h3>
+          <p data-fa="بعد از تحویل تنهات نمی‌ذاریم. پشتیبانی مستمر، آپدیت‌های دوره‌ای، بک‌آپ و بهینه‌سازی مداوم تا محصولت همیشه سالم و به‌روز بمونه." data-en="We don't leave you after delivery. Continuous support, regular updates, backups and ongoing optimization keep your product healthy and current.">بعد از تحویل تنهات نمی‌ذاریم. پشتیبانی مستمر، آپدیت‌های دوره‌ای، بک‌آپ و بهینه‌سازی مداوم تا محصولت همیشه سالم و به‌روز بمونه.</p>
+          <ul class="pin-stage-points">
+            <li data-fa="مانیتورینگ ۲۴ ساعته و هشدار" data-en="24/7 monitoring and alerts">مانیتورینگ ۲۴ ساعته و هشدار</li>
+            <li data-fa="بک‌آپ خودکار و بازیابی سریع" data-en="Automatic backup and fast recovery">بک‌آپ خودکار و بازیابی سریع</li>
+            <li data-fa="آپدیت امنیتی و بهبود عملکرد" data-en="Security updates and performance tuning">آپدیت امنیتی و بهبود عملکرد</li>
+          </ul>
+          <div class="card-tags"><span>24/7 Support</span><span>Updates</span></div>
         </div>
-        <h3 data-fa="نگهداری و پشتیبانی" data-en="Maintenance & Support">نگهداری و پشتیبانی</h3>
-        <p data-fa="پشتیبانی مستمر، آپدیت‌های دوره‌ای و بهینه‌سازی مداوم محصول شما" data-en="Continuous support, regular updates and ongoing optimization of your product">پشتیبانی مستمر، آپدیت‌های دوره‌ای و بهینه‌سازی مداوم محصول شما</p>
-        <div class="card-tags"><span>24/7 Support</span><span>Updates</span></div>
-      </div>
-      <div class="card reveal" style="--d:.5s">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </article>
+
+      <article class="pin-stage" data-stage="5">
+        <span class="pin-ghost-num">۰۶</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 data-fa="مشاوره فنی" data-en="Tech Consulting">مشاوره فنی</h3>
+          <p data-fa="هنوز مطمئن نیستی از کجا شروع کنی؟ در انتخاب تکنولوژی، معماری سیستم، برآورد هزینه و نقشه‌ی راه پروژه کنارتیم تا تصمیم درست رو بگیری." data-en="Not sure where to start? We guide you through technology selection, system architecture, cost estimation and project roadmap so you make the right call.">هنوز مطمئن نیستی از کجا شروع کنی؟ در انتخاب تکنولوژی، معماری سیستم، برآورد هزینه و نقشه‌ی راه پروژه کنارتیم تا تصمیم درست رو بگیری.</p>
+          <ul class="pin-stage-points">
+            <li data-fa="انتخاب استک و معماری مناسب" data-en="Right stack and architecture selection">انتخاب استک و معماری مناسب</li>
+            <li data-fa="برآورد زمان، هزینه و ریسک" data-en="Time, cost and risk estimation">برآورد زمان، هزینه و ریسک</li>
+            <li data-fa="نقشه‌ی راه و اولویت‌بندی فیچرها" data-en="Roadmap and feature prioritization">نقشه‌ی راه و اولویت‌بندی فیچرها</li>
+          </ul>
+          <div class="card-tags"><span>Architecture</span><span>Strategy</span></div>
         </div>
-        <h3 data-fa="مشاوره فنی" data-en="Tech Consulting">مشاوره فنی</h3>
-        <p data-fa="راهنمایی در انتخاب تکنولوژی، معماری سیستم و برنامه‌ریزی پروژه" data-en="Guidance on technology selection, system architecture and project planning">راهنمایی در انتخاب تکنولوژی، معماری سیستم و برنامه‌ریزی پروژه</p>
-        <div class="card-tags"><span>Architecture</span><span>Strategy</span></div>
+      </article>
+    </div>
+
+    <div class="pin-rail">
+      <span class="pin-counter"><b class="pin-counter-cur">۱</b> / ۶</span>
+      <div class="pin-rail-track"><div class="pin-rail-fill"></div></div>
+      <div class="pin-dots">
+        <span class="pin-dot active"></span><span class="pin-dot"></span><span class="pin-dot"></span>
+        <span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span>
       </div>
     </div>
   </div>
@@ -162,39 +229,38 @@
   </div>
 </div>
 
-<!-- ─── WORDPRESS ─── -->
-<section id="wordpress" class="section section-dark">
-  <div class="container">
-    <div class="wp-grid">
-      <div class="wp-text reveal-left">
+<!-- ─── WORDPRESS (PINNED · stepping features) ─── -->
+<section id="wordpress" class="pin-section pin-side pin-section-dark" data-pin style="--stages:5">
+  <div class="pin-sticky pin-sticky-grid">
+      <div class="wp-text">
         <span class="section-tag" data-fa="سایت وردپرسی" data-en="WordPress Website">سایت وردپرسی</span>
         <h2 data-fa="سایت وردپرسی حرفه‌ای برای کسب‌وکار شما" data-en="Professional WordPress Site for Your Business">سایت وردپرسی حرفه‌ای برای کسب‌وکار شما</h2>
         <p data-fa="وردپرس قدرتمندترین CMS دنیاست. ما سایت‌هایی می‌سازیم که هم زیباست، هم سریع، هم قابل مدیریت توسط خودت." data-en="WordPress is the world's most powerful CMS. We build sites that are beautiful, fast, and manageable by you.">وردپرس قدرتمندترین CMS دنیاست. ما سایت‌هایی می‌سازیم که هم زیباست، هم سریع، هم قابل مدیریت توسط خودت.</p>
-        <ul class="wp-features">
-          <li class="reveal-left" style="--d:.1s">
+        <ul class="wp-features pin-steps">
+          <li class="pin-stage" data-stage="0">
             <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
             <div><strong data-fa="قالب اختصاصی" data-en="Custom Theme">قالب اختصاصی</strong><span data-fa="طراحی منحصربه‌فرد متناسب با برند شما" data-en="Unique design tailored to your brand">طراحی منحصربه‌فرد متناسب با برند شما</span></div>
           </li>
-          <li class="reveal-left" style="--d:.2s">
+          <li class="pin-stage" data-stage="1">
             <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
             <div><strong data-fa="فروشگاه WooCommerce" data-en="WooCommerce Shop">فروشگاه WooCommerce</strong><span data-fa="فروشگاه آنلاین کامل با درگاه پرداخت" data-en="Full online store with payment gateway">فروشگاه آنلاین کامل با درگاه پرداخت</span></div>
           </li>
-          <li class="reveal-left" style="--d:.3s">
+          <li class="pin-stage" data-stage="2">
             <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z"/><circle cx="12" cy="12" r="3"/></svg></div>
             <div><strong data-fa="سئو آماده" data-en="SEO Ready">سئو آماده</strong><span data-fa="بهینه‌سازی شده برای گوگل از روز اول" data-en="Optimized for Google from day one">بهینه‌سازی شده برای گوگل از روز اول</span></div>
           </li>
-          <li class="reveal-left" style="--d:.4s">
+          <li class="pin-stage" data-stage="3">
             <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg></div>
             <div><strong data-fa="کاملاً ریسپانسیو" data-en="Fully Responsive">کاملاً ریسپانسیو</strong><span data-fa="سازگار با موبایل، تبلت و دسکتاپ" data-en="Compatible with mobile, tablet and desktop">سازگار با موبایل، تبلت و دسکتاپ</span></div>
           </li>
-          <li class="reveal-left" style="--d:.5s">
+          <li class="pin-stage" data-stage="4">
             <div class="wp-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <div><strong data-fa="امنیت و بک‌آپ" data-en="Security & Backup">امنیت و بک‌آپ</strong><span data-fa="محافظت کامل و بک‌آپ خودکار" data-en="Full protection and automatic backup">محافظت کامل و بک‌آپ خودکار</span></div>
           </li>
         </ul>
-        <a href="#idea" class="btn btn-primary reveal-left" style="--d:.6s" data-fa="سایت وردپرسی می‌خوام" data-en="I Want a WordPress Site">سایت وردپرسی می‌خوام</a>
+        <a href="#idea" class="btn btn-primary" data-fa="سایت وردپرسی می‌خوام" data-en="I Want a WordPress Site">سایت وردپرسی می‌خوام</a>
       </div>
-      <div class="wp-visual reveal-right">
+      <div class="wp-visual">
         <div class="wp-browser">
           <div class="browser-bar">
             <span class="b-dot" style="background:#ff5f57"></span>
@@ -230,21 +296,54 @@
           <span>SEO Ready</span>
         </div>
       </div>
-    </div>
   </div>
 </section>
-
-<!-- ─── SEO ─── -->
-<section id="seo" class="section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag" data-fa="بهینه‌سازی موتور جستجو" data-en="Search Engine Optimization">بهینه‌سازی موتور جستجو</span>
-      <h2 data-fa="سایتت رو در گوگل بالا بیار" data-en="Rank Higher on Google">سایتت رو در گوگل بالا بیار</h2>
-      <p data-fa="با سئو حرفه‌ای، مشتریان خودشون پیدات می‌کنن" data-en="With professional SEO, customers find you on their own">با سئو حرفه‌ای، مشتریان خودشون پیدات می‌کنن</p>
-    </div>
-
-    <div class="seo-layout">
-      <div class="seo-metrics reveal-left">
+<!-- ─── SEO (PINNED · stepping services) ─── -->
+<section id="seo" class="pin-section pin-side" data-pin style="--stages:5">
+  <div class="pin-sticky pin-sticky-grid">
+      <div class="seo-content">
+        <span class="section-tag" data-fa="بهینه‌سازی موتور جستجو" data-en="Search Engine Optimization">بهینه‌سازی موتور جستجو</span>
+        <h2 data-fa="سایتت رو در گوگل بالا بیار" data-en="Rank Higher on Google">سایتت رو در گوگل بالا بیار</h2>
+        <p class="seo-content-sub" data-fa="با سئو حرفه‌ای، مشتریان خودشون پیدات می‌کنن" data-en="With professional SEO, customers find you on their own">با سئو حرفه‌ای، مشتریان خودشون پیدات می‌کنن</p>
+        <div class="seo-services-list pin-steps">
+          <div class="seo-service pin-stage" data-stage="0">
+            <div class="seo-s-num">01</div>
+            <div class="seo-s-body">
+              <h3 data-fa="سئوی داخلی" data-en="On-Page SEO">سئوی داخلی</h3>
+              <p data-fa="بهینه‌سازی عنوان‌ها، توضیحات متا، ساختار URL، لینک‌سازی داخلی و محتوای کلیدی" data-en="Optimizing titles, meta descriptions, URL structure, internal linking and key content">بهینه‌سازی عنوان‌ها، توضیحات متا، ساختار URL، لینک‌سازی داخلی و محتوای کلیدی</p>
+            </div>
+          </div>
+          <div class="seo-service pin-stage" data-stage="1">
+            <div class="seo-s-num">02</div>
+            <div class="seo-s-body">
+              <h3 data-fa="سئوی فنی" data-en="Technical SEO">سئوی فنی</h3>
+              <p data-fa="بهینه‌سازی Core Web Vitals، schema markup، sitemap، robots.txt و ساختار کرال" data-en="Optimizing Core Web Vitals, schema markup, sitemap, robots.txt and crawl structure">بهینه‌سازی Core Web Vitals، schema markup، sitemap، robots.txt و ساختار کرال</p>
+            </div>
+          </div>
+          <div class="seo-service pin-stage" data-stage="2">
+            <div class="seo-s-num">03</div>
+            <div class="seo-s-body">
+              <h3 data-fa="سئوی محلی" data-en="Local SEO">سئوی محلی</h3>
+              <p data-fa="بهینه‌سازی Google My Business، نقشه‌ها و جستجوهای محلی برای کسب‌وکار شما" data-en="Optimizing Google My Business, maps and local searches for your business">بهینه‌سازی Google My Business، نقشه‌ها و جستجوهای محلی برای کسب‌وکار شما</p>
+            </div>
+          </div>
+          <div class="seo-service pin-stage" data-stage="3">
+            <div class="seo-s-num">04</div>
+            <div class="seo-s-body">
+              <h3 data-fa="گزارش و آنالیز" data-en="Reporting & Analytics">گزارش و آنالیز</h3>
+              <p data-fa="گزارش ماهانه رنکینگ کلمات کلیدی، ترافیک، و پیشنهاد بهبود مستمر" data-en="Monthly keyword ranking reports, traffic insights and continuous improvement suggestions">گزارش ماهانه رنکینگ کلمات کلیدی، ترافیک، و پیشنهاد بهبود مستمر</p>
+            </div>
+          </div>
+          <div class="seo-service pin-stage" data-stage="4">
+            <div class="seo-s-num">05</div>
+            <div class="seo-s-body">
+              <h3 data-fa="تولید محتوا" data-en="Content Creation">تولید محتوا</h3>
+              <p data-fa="تولید محتوای بهینه‌شده برای کلمات کلیدی هدف که هم گوگل عاشقشه هم کاربر" data-en="Creating keyword-optimized content that both Google and users love">تولید محتوای بهینه‌شده برای کلمات کلیدی هدف که هم گوگل عاشقشه هم کاربر</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="seo-metrics">
         <div class="seo-score-card">
           <div class="seo-ring-wrap">
             <svg class="seo-ring" viewBox="0 0 120 120">
@@ -299,78 +398,59 @@
           </div>
         </div>
       </div>
-
-      <div class="seo-services-list">
-        <div class="seo-service reveal-right" style="--d:0s">
-          <div class="seo-s-num">01</div>
-          <div class="seo-s-body">
-            <h3 data-fa="سئوی داخلی" data-en="On-Page SEO">سئوی داخلی</h3>
-            <p data-fa="بهینه‌سازی عنوان‌ها، توضیحات متا، ساختار URL، لینک‌سازی داخلی و محتوای کلیدی" data-en="Optimizing titles, meta descriptions, URL structure, internal linking and key content">بهینه‌سازی عنوان‌ها، توضیحات متا، ساختار URL، لینک‌سازی داخلی و محتوای کلیدی</p>
-          </div>
-        </div>
-        <div class="seo-service reveal-right" style="--d:.1s">
-          <div class="seo-s-num">02</div>
-          <div class="seo-s-body">
-            <h3 data-fa="سئوی فنی" data-en="Technical SEO">سئوی فنی</h3>
-            <p data-fa="بهینه‌سازی Core Web Vitals، schema markup، sitemap، robots.txt و ساختار کرال" data-en="Optimizing Core Web Vitals, schema markup, sitemap, robots.txt and crawl structure">بهینه‌سازی Core Web Vitals، schema markup، sitemap، robots.txt و ساختار کرال</p>
-          </div>
-        </div>
-        <div class="seo-service reveal-right" style="--d:.2s">
-          <div class="seo-s-num">03</div>
-          <div class="seo-s-body">
-            <h3 data-fa="سئوی محلی" data-en="Local SEO">سئوی محلی</h3>
-            <p data-fa="بهینه‌سازی Google My Business، نقشه‌ها و جستجوهای محلی برای کسب‌وکار شما" data-en="Optimizing Google My Business, maps and local searches for your business">بهینه‌سازی Google My Business، نقشه‌ها و جستجوهای محلی برای کسب‌وکار شما</p>
-          </div>
-        </div>
-        <div class="seo-service reveal-right" style="--d:.3s">
-          <div class="seo-s-num">04</div>
-          <div class="seo-s-body">
-            <h3 data-fa="گزارش و آنالیز" data-en="Reporting & Analytics">گزارش و آنالیز</h3>
-            <p data-fa="گزارش ماهانه رنکینگ کلمات کلیدی، ترافیک، و پیشنهاد بهبود مستمر" data-en="Monthly keyword ranking reports, traffic insights and continuous improvement suggestions">گزارش ماهانه رنکینگ کلمات کلیدی، ترافیک، و پیشنهاد بهبود مستمر</p>
-          </div>
-        </div>
-        <div class="seo-service reveal-right" style="--d:.4s">
-          <div class="seo-s-num">05</div>
-          <div class="seo-s-body">
-            <h3 data-fa="تولید محتوا" data-en="Content Creation">تولید محتوا</h3>
-            <p data-fa="تولید محتوای بهینه‌شده برای کلمات کلیدی هدف که هم گوگل عاشقشه هم کاربر" data-en="Creating keyword-optimized content that both Google and users love">تولید محتوای بهینه‌شده برای کلمات کلیدی هدف که هم گوگل عاشقشه هم کاربر</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ─── HOW IT WORKS ─── -->
-<section id="how" class="section">
-  <div class="container">
-    <div class="section-header reveal">
+<!-- ─── HOW IT WORKS (PINNED SCROLLYTELLING) ─── -->
+<section id="how" class="pin-section" data-pin>
+  <div class="pin-sticky">
+    <div class="pin-head">
       <span class="section-tag" data-fa="فرآیند کار" data-en="How It Works">فرآیند کار</span>
       <h2 data-fa="چطور کار می‌کنیم" data-en="How We Work">چطور کار می‌کنیم</h2>
     </div>
-    <div class="steps">
-      <div class="step reveal" style="--d:0s">
-        <div class="step-num">۱</div>
-        <div class="step-body">
+
+    <div class="pin-stages">
+      <article class="pin-stage" data-stage="0">
+        <span class="pin-ghost-num">۱</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
           <h3 data-fa="ایده‌ات رو بفرست" data-en="Submit Your Idea">ایده‌ات رو بفرست</h3>
           <p data-fa="فرم ایده را پر کن، توضیح بده چی می‌خوای. هیچ دانش فنی لازم نیست." data-en="Fill the idea form, describe what you want. No technical knowledge needed.">فرم ایده را پر کن، توضیح بده چی می‌خوای. هیچ دانش فنی لازم نیست.</p>
         </div>
-      </div>
-      <div class="step-connector reveal" style="--d:.1s"></div>
-      <div class="step reveal" style="--d:.2s">
-        <div class="step-num">۲</div>
-        <div class="step-body">
+      </article>
+
+      <article class="pin-stage" data-stage="1">
+        <span class="pin-ghost-num">۲</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
           <h3 data-fa="بررسی و پیشنهاد" data-en="Review & Proposal">بررسی و پیشنهاد</h3>
           <p data-fa="تیم ما ایده‌ات رو بررسی می‌کنه و یه پیشنهاد فنی و مالی برات می‌فرسته." data-en="Our team reviews your idea and sends you a technical and financial proposal.">تیم ما ایده‌ات رو بررسی می‌کنه و یه پیشنهاد فنی و مالی برات می‌فرسته.</p>
         </div>
-      </div>
-      <div class="step-connector reveal" style="--d:.3s"></div>
-      <div class="step reveal" style="--d:.4s">
-        <div class="step-num">۳</div>
-        <div class="step-body">
+      </article>
+
+      <article class="pin-stage" data-stage="2">
+        <span class="pin-ghost-num">۳</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
           <h3 data-fa="توسعه و تحویل" data-en="Build & Deliver">توسعه و تحویل</h3>
           <p data-fa="شروع می‌کنیم، در مراحل مختلف بهت گزارش می‌دیم و نهایتاً محصول رو تحویل می‌گیری." data-en="We start building, report progress at each stage, and deliver the final product.">شروع می‌کنیم، در مراحل مختلف بهت گزارش می‌دیم و نهایتاً محصول رو تحویل می‌گیری.</p>
         </div>
+      </article>
+    </div>
+
+    <div class="pin-rail">
+      <span class="pin-counter"><b class="pin-counter-cur">۱</b> / ۳</span>
+      <div class="pin-rail-track"><div class="pin-rail-fill"></div></div>
+      <div class="pin-dots">
+        <span class="pin-dot active"></span>
+        <span class="pin-dot"></span>
+        <span class="pin-dot"></span>
       </div>
     </div>
   </div>
@@ -431,40 +511,131 @@
   </div>
 </section>
 
-<!-- ─── WHY US ─── -->
-<section id="why" class="section">
-  <div class="container">
-    <div class="section-header reveal">
+<!-- ─── WHY US (PINNED) ─── -->
+<section id="why" class="pin-section" data-pin style="--stages:4">
+  <div class="pin-sticky">
+    <div class="pin-head">
       <span class="section-tag" data-fa="چرا وب‌نشین" data-en="Why Webneshin">چرا وب‌نشین</span>
       <h2 data-fa="چرا ما رو انتخاب کنی" data-en="Why Choose Us">چرا ما رو انتخاب کنی</h2>
     </div>
-    <div class="why-grid">
-      <div class="why-item reveal" style="--d:0s">
-        <div class="why-icon">🎯</div>
-        <h3 data-fa="تمرکز روی نتیجه" data-en="Result Focused">تمرکز روی نتیجه</h3>
-        <p data-fa="برامون مهمه محصول کار کنه، نه فقط تحویل داده بشه." data-en="We care that the product works, not just that it's delivered.">برامون مهمه محصول کار کنه، نه فقط تحویل داده بشه.</p>
-      </div>
-      <div class="why-item reveal" style="--d:.1s">
-        <div class="why-icon">⚡</div>
-        <h3 data-fa="سرعت بالا" data-en="Fast Delivery">سرعت بالا</h3>
-        <p data-fa="با متدولوژی Agile، سریع تحویل می‌دیم و سریع بهبود می‌دیم." data-en="With Agile methodology, we deliver fast and improve fast.">با متدولوژی Agile، سریع تحویل می‌دیم و سریع بهبود می‌دیم.</p>
-      </div>
-      <div class="why-item reveal" style="--d:.2s">
-        <div class="why-icon">💬</div>
-        <h3 data-fa="ارتباط شفاف" data-en="Clear Communication">ارتباط شفاف</h3>
-        <p data-fa="همیشه در دسترسیم. هر مرحله رو باهات در میان می‌ذاریم." data-en="Always available. We keep you updated at every stage.">همیشه در دسترسیم. هر مرحله رو باهات در میان می‌ذاریم.</p>
-      </div>
-      <div class="why-item reveal" style="--d:.3s">
-        <div class="why-icon">🔐</div>
-        <h3 data-fa="کد تمیز و امن" data-en="Clean & Secure Code">کد تمیز و امن</h3>
-        <p data-fa="کد قابل نگهداری، تست‌شده و امن می‌نویسیم." data-en="We write maintainable, tested and secure code.">کد قابل نگهداری، تست‌شده و امن می‌نویسیم.</p>
+
+    <div class="pin-stages">
+      <article class="pin-stage" data-stage="0">
+        <span class="pin-ghost-num">🎯</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3 data-fa="تمرکز روی نتیجه" data-en="Result Focused">تمرکز روی نتیجه</h3>
+          <p data-fa="برامون مهمه محصول واقعاً کار کنه و مشکل کاربرت رو حل کنه، نه فقط اینکه تحویل داده بشه. موفقیت تو، موفقیت ماست." data-en="We care that the product actually works and solves your users' problem — not just that it ships. Your success is our success.">برامون مهمه محصول واقعاً کار کنه و مشکل کاربرت رو حل کنه، نه فقط اینکه تحویل داده بشه. موفقیت تو، موفقیت ماست.</p>
+        </div>
+      </article>
+
+      <article class="pin-stage" data-stage="1">
+        <span class="pin-ghost-num">⚡</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 data-fa="سرعت بالا" data-en="Fast Delivery">سرعت بالا</h3>
+          <p data-fa="با متدولوژی Agile و تحویل مرحله‌ای، سریع به نسخه‌ی قابل استفاده می‌رسی و سریع بازخورد می‌گیری؛ بدون اینکه ماه‌ها منتظر بمونی." data-en="With Agile and incremental delivery you reach a usable version fast and get feedback fast — without waiting months.">با متدولوژی Agile و تحویل مرحله‌ای، سریع به نسخه‌ی قابل استفاده می‌رسی و سریع بازخورد می‌گیری؛ بدون اینکه ماه‌ها منتظر بمونی.</p>
+        </div>
+      </article>
+
+      <article class="pin-stage" data-stage="2">
+        <span class="pin-ghost-num">💬</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 data-fa="ارتباط شفاف" data-en="Clear Communication">ارتباط شفاف</h3>
+          <p data-fa="همیشه در دسترسیم. هر مرحله رو شفاف باهات در میون می‌ذاریم، گزارش پیشرفت می‌دیم و هیچ‌وقت تو ابهام نمی‌مونی." data-en="We're always available. We keep you in the loop at every stage with clear progress reports — you're never left in the dark.">همیشه در دسترسیم. هر مرحله رو شفاف باهات در میون می‌ذاریم، گزارش پیشرفت می‌دیم و هیچ‌وقت تو ابهام نمی‌مونی.</p>
+        </div>
+      </article>
+
+      <article class="pin-stage" data-stage="3">
+        <span class="pin-ghost-num">🔐</span>
+        <div class="pin-stage-inner">
+          <div class="pin-stage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-fa="کد تمیز و امن" data-en="Clean & Secure Code">کد تمیز و امن</h3>
+          <p data-fa="کد قابل نگهداری، تست‌شده و امن می‌نویسیم تا فردا که خواستی توسعه‌اش بدی یا تیمت تحویلش بگیره، دردسر نداشته باشی." data-en="We write maintainable, tested and secure code so that when you want to extend it tomorrow — or hand it to your team — there's no headache.">کد قابل نگهداری، تست‌شده و امن می‌نویسیم تا فردا که خواستی توسعه‌اش بدی یا تیمت تحویلش بگیره، دردسر نداشته باشی.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="pin-rail">
+      <span class="pin-counter"><b class="pin-counter-cur">۱</b> / ۴</span>
+      <div class="pin-rail-track"><div class="pin-rail-fill"></div></div>
+      <div class="pin-dots">
+        <span class="pin-dot active"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ─── STATS STRIP ─── -->
+<section class="section stats-section">
+  <div class="container">
     <div class="stats reveal">
       <div class="stat"><span class="stat-num" data-target="50">0</span><span>+</span><p data-fa="پروژه تحویل‌شده" data-en="Projects Delivered">پروژه تحویل‌شده</p></div>
       <div class="stat"><span class="stat-num" data-target="30">0</span><span>+</span><p data-fa="مشتری راضی" data-en="Happy Clients">مشتری راضی</p></div>
       <div class="stat"><span class="stat-num" data-target="5">0</span><span>+</span><p data-fa="سال تجربه" data-en="Years Experience">سال تجربه</p></div>
       <div class="stat"><span class="stat-num" data-target="98">0</span><span>%</span><p data-fa="رضایت مشتری" data-en="Client Satisfaction">رضایت مشتری</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS (PINNED) ─── -->
+<section id="testimonials" class="pin-section pin-section-dark" data-pin style="--stages:3">
+  <div class="pin-sticky">
+    <div class="pin-head">
+      <span class="section-tag" data-fa="نظر مشتری‌ها" data-en="Testimonials">نظر مشتری‌ها</span>
+      <h2 data-fa="مشتری‌ها چی می‌گن" data-en="What Clients Say">مشتری‌ها چی می‌گن</h2>
+    </div>
+
+    <div class="pin-stages">
+      <article class="pin-stage" data-stage="0">
+        <span class="pin-ghost-num">“</span>
+        <div class="pin-stage-inner">
+          <p class="quote" data-fa="«ایده‌ام فقط یه فکر تو ذهنم بود؛ تیم وب‌نشین تبدیلش کرد به یه اپ واقعی که الان روزانه صدها کاربر داره. حرفه‌ای، دقیق و سر وقت.»" data-en="“My idea was just a thought in my head; the Webneshin team turned it into a real app that now has hundreds of daily users. Professional, precise and on time.”">«ایده‌ام فقط یه فکر تو ذهنم بود؛ تیم وب‌نشین تبدیلش کرد به یه اپ واقعی که الان روزانه صدها کاربر داره. حرفه‌ای، دقیق و سر وقت.»</p>
+          <div class="quote-author">
+            <span class="qa-avatar">س</span>
+            <div><strong data-fa="سارا محمدی" data-en="Sara Mohammadi">سارا محمدی</strong><small data-fa="بنیان‌گذار استارتاپ" data-en="Startup Founder">بنیان‌گذار استارتاپ</small></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pin-stage" data-stage="1">
+        <span class="pin-ghost-num">“</span>
+        <div class="pin-stage-inner">
+          <p class="quote" data-fa="«فروشگاه وردپرسی‌مون رو از صفر ساختن و سرعت سایت باورنکردنیه. فروش آنلاین‌مون تو سه ماه دو برابر شد.»" data-en="“They built our WordPress shop from scratch and the site speed is incredible. Our online sales doubled in three months.”">«فروشگاه وردپرسی‌مون رو از صفر ساختن و سرعت سایت باورنکردنیه. فروش آنلاین‌مون تو سه ماه دو برابر شد.»</p>
+          <div class="quote-author">
+            <span class="qa-avatar">ر</span>
+            <div><strong data-fa="رضا کریمی" data-en="Reza Karimi">رضا کریمی</strong><small data-fa="مدیر فروشگاه آنلاین" data-en="E-commerce Manager">مدیر فروشگاه آنلاین</small></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pin-stage" data-stage="2">
+        <span class="pin-ghost-num">“</span>
+        <div class="pin-stage-inner">
+          <p class="quote" data-fa="«با سئویی که انجام دادن، سایتمون اومد صفحه‌ی اول گوگل و الان مشتری‌ها خودشون پیدامون می‌کنن. واقعاً فرق رو حس کردیم.»" data-en="“With the SEO they did, our site reached Google's first page and now customers find us on their own. We truly felt the difference.”">«با سئویی که انجام دادن، سایتمون اومد صفحه‌ی اول گوگل و الان مشتری‌ها خودشون پیدامون می‌کنن. واقعاً فرق رو حس کردیم.»</p>
+          <div class="quote-author">
+            <span class="qa-avatar">م</span>
+            <div><strong data-fa="مریم احمدی" data-en="Maryam Ahmadi">مریم احمدی</strong><small data-fa="مدیر بازاریابی" data-en="Marketing Lead">مدیر بازاریابی</small></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="pin-rail">
+      <span class="pin-counter"><b class="pin-counter-cur">۱</b> / ۳</span>
+      <div class="pin-rail-track"><div class="pin-rail-fill"></div></div>
+      <div class="pin-dots">
+        <span class="pin-dot active"></span><span class="pin-dot"></span><span class="pin-dot"></span>
+      </div>
     </div>
   </div>
 </section>
@@ -521,6 +692,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

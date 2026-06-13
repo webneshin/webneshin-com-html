@@ -85,6 +85,109 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
   particlesContainer.appendChild(p);
 }
 
+/* ─── LENIS SMOOTH SCROLL ─── */
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lenis = null;
+
+if (!prefersReducedMotion && window.Lenis) {
+  lenis = new Lenis({
+    duration: 1.15,                                   // momentum length
+    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // expo-out
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 1.6,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // drive scroll-linked effects from Lenis for buttery sync
+  lenis.on('scroll', () => {
+    updateParallax();
+    updateProgress();
+    updatePins();
+    updateSpy();
+  });
+}
+
+/* ─── SCROLL PROGRESS BAR ─── */
+const scrollProgress = document.getElementById('scrollProgress');
+
+function updateProgress() {
+  if (!scrollProgress) return;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+  scrollProgress.style.width = pct + '%';
+}
+
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
+/* ─── PINNED SCROLLYTELLING ─── */
+const FA_DIGITS = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+const toFa = n => String(n).split('').map(d => FA_DIGITS[+d] ?? d).join('');
+
+const pinSections = Array.from(document.querySelectorAll('[data-pin]')).map(section => ({
+  section,
+  stages: section.querySelectorAll('.pin-stage'),
+  fill:   section.querySelector('.pin-rail-fill'),
+  dots:   section.querySelectorAll('.pin-dot'),
+  cur:    section.querySelector('.pin-counter-cur'),
+  lastIdx: -1,
+}));
+
+function updatePins() {
+  const viewH = window.innerHeight;
+  pinSections.forEach(p => {
+    const total = p.section.offsetHeight - viewH;
+    if (total <= 0) return; // mobile fallback / not pinned
+    const top = p.section.getBoundingClientRect().top;
+    let progress = Math.min(Math.max(-top / total, 0), 1);
+
+    if (p.fill) p.fill.style.width = (progress * 100) + '%';
+
+    const n = p.stages.length;
+    // bias so the last stage gets full screen-time before the section ends
+    const idx = Math.min(n - 1, Math.floor(progress * n * 0.999));
+    if (idx !== p.lastIdx) {
+      p.lastIdx = idx;
+      p.stages.forEach((s, i) => s.classList.toggle('active', i === idx));
+      p.dots.forEach((d, i) => d.classList.toggle('active', i <= idx));
+      if (p.cur) p.cur.textContent = toFa(idx + 1);
+    }
+  });
+}
+
+window.addEventListener('scroll', updatePins, { passive: true });
+window.addEventListener('resize', updatePins);
+updatePins();
+
+/* ─── NAV SCROLL-SPY ─── */
+const spyLinks = Array.from(document.querySelectorAll('.nav-links a'))
+  .map(link => {
+    const href = link.getAttribute('href') || '';
+    const sec = href.startsWith('#') && href.length > 1 ? document.querySelector(href) : null;
+    return sec ? { link, sec } : null;
+  })
+  .filter(Boolean);
+
+function updateSpy() {
+  const mid = window.scrollY + window.innerHeight * 0.35;
+  let current = null;
+  spyLinks.forEach(({ link, sec }) => {
+    const top = sec.offsetTop;
+    if (mid >= top && mid < top + sec.offsetHeight) current = link;
+  });
+  spyLinks.forEach(({ link }) => link.classList.toggle('active', link === current));
+}
+
+window.addEventListener('scroll', updateSpy, { passive: true });
+window.addEventListener('resize', updateSpy);
+updateSpy();
+
 /* ─── PARALLAX ─── */
 const heroBg = document.getElementById('heroBg');
 const parallaxInner = document.getElementById('parallaxInner');
@@ -114,13 +217,14 @@ window.addEventListener('scroll', updateParallax, { passive: true });
 /* ─── REVEAL ON SCROLL ─── */
 const allRevealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 
-const revealObserver = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // reveal once, then release
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
 allRevealEls.forEach(el => revealObserver.observe(el));
 
@@ -157,10 +261,17 @@ if (statsSection) {
 /* ─── SMOOTH SCROLL ─── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
-    const target = document.querySelector(anchor.getAttribute('href'));
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const offset = -72; // fixed navbar height
+      if (lenis) {
+        lenis.scrollTo(target, { offset, duration: 1.4 });
+      } else {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   });
 });
@@ -193,10 +304,11 @@ if (ideaForm) {
 }
 
 /* ─── SEO SCORE RING + BARS ─── */
-const seoSection = document.getElementById('seo');
+/* observe the score card itself — the #seo section is now a tall pinned block */
+const seoScoreCard = document.querySelector('#seo .seo-score-card');
 let seoAnimated = false;
 
-if (seoSection) {
+if (seoScoreCard) {
   const seoObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting && !seoAnimated) {
       seoAnimated = true;
@@ -220,8 +332,8 @@ if (seoSection) {
         setTimeout(() => { bar.style.width = w + '%'; }, 300);
       });
     }
-  }, { threshold: 0.3 });
-  seoObserver.observe(seoSection);
+  }, { threshold: 0.4 });
+  seoObserver.observe(seoScoreCard);
 }
 
 /* ─── TILT EFFECT ON CARDS (desktop) ─── */
