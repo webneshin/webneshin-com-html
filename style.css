@@ -17,7 +17,7 @@
   --font-en:  'Inter', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   background: var(--bg);
@@ -25,7 +25,8 @@ body {
   font-family: var(--font-fa);
   font-size: 16px;
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
 }
 
 body.en {
@@ -74,7 +75,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.25rem;
+  font-size: 2.0rem;
   font-weight: 700;
 }
 
@@ -1159,11 +1160,14 @@ html.lenis, html.lenis body { height: auto; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* clear the absolutely-positioned head so tall stage content
+     (e.g. the dense Services cards) can't ride up under the title */
+  padding-top: 5vh;
 }
 
 .pin-head {
   position: absolute;
-  top: 12vh;
+  top: 8vh;
   left: 0; right: 0;
   text-align: center;
   z-index: 3;
@@ -1414,9 +1418,9 @@ html.lenis, html.lenis body { height: auto; }
 /* on short / touch screens, fall back to a simple stacked layout (no pin) */
 @media (max-width: 760px), (prefers-reduced-motion: reduce) {
   .pin-section { height: auto; }
-  .pin-sticky { position: relative; height: auto; padding: 90px 0; gap: 40px; }
+  .pin-sticky { position: relative; height: auto; padding: 80px 20px; gap: 40px; }
   .pin-head { position: relative; top: auto; margin-bottom: 20px; }
-  .pin-stages { height: auto; display: flex; flex-direction: column; gap: 56px; }
+  .pin-stages { height: auto; display: flex; flex-direction: column; gap: 56px; padding: 0; }
   .pin-stages > .pin-stage {
     position: relative;
     inset: auto;
