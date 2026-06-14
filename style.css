@@ -358,6 +358,8 @@ body.en .hero-content { text-align: center; }
 /* ─── MARQUEE ─── */
 .marquee-wrap {
   overflow: hidden;
+  /* keywords are English — keep it LTR so the loop works in RTL pages too */
+  direction: ltr;
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -366,15 +368,18 @@ body.en .hero-content { text-align: center; }
 
 .marquee-track {
   display: flex;
-  gap: 32px;
   width: max-content;
-  animation: marquee 20s linear infinite;
+  animation: marquee 40s linear infinite;
   font-size: .85rem;
   font-weight: 500;
   color: var(--muted);
   letter-spacing: .05em;
   text-transform: uppercase;
 }
+
+/* uniform spacing per item (incl. a trailing gap on every item) so the
+   -50% loop lands exactly on a repeat boundary — seamless, no jump */
+.marquee-track span { margin-inline-end: 32px; }
 
 .marquee-track span:nth-child(even) { color: var(--accent2); }
 
